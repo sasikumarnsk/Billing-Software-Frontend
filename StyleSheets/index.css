@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+a{
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
+    font-size: 20px;
+    
+}
+.menu-bar{
+    background-color: black;
+    position: fixed;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    justify-content: space-between;
+    
+
+}
+
+.nav-items{
+    
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 40px;
+}
+.nav-items #logout{
+    margin-right: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-items #logout:hover{
+    color: red;
+    transition: color 1.5s;
+}
+
+.nav-items li{
+    padding-left: 60px;
+    display: inline-block;
+}
+
+.nav-items li a{
+    transition: all 0.6s ease 0s;
+}
+
+.nav-items li a:hover, .active{
+    color: rgb(2, 0, 128);
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px 10px 20px;
+    border-radius: 25px;
+}
+
+#click{
+    display: none; 
+
+}
+
+/*---------------------------------Table style start here-----------------------------*/
+.table-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;  
+    align-items: center; 
+}
+table{
+   border-collapse: collapse;
+   align-content: center;
+   text-align: center;
+   margin: 20px;
+   font-size: 20px;
+   font-weight: 520;
+}
+
+td{
+    border: 3px solid; 
+    border-color:rgb(70, 69, 69);  
+    padding: 5px;
+ }
+th{
+    border: 3px solid; 
+    border-color:rgb(70, 69, 69);  
+    background-color: rgba(128, 128, 128, 0.404);
+    padding: 8px;
+    font-weight: 900;
+}
+/*------------------------------Modals style starts here-----------------------------*/
+.modal{
+    position :absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(2, 1, 1, 0.233);
+    padding: 20px;
+}
+.modal:target{
+    visibility: visible;
+    opacity: 1;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.close{ 
+    color: red;
+    position:relative;
+    left:50%;
+    
+}
+
+.product-container{
+    background-color: rgba(0, 194, 194, 0.664);
+    padding: 30px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h2{
+    margin-bottom: 20px;
+}
+input{
+    padding: 5px;
+    width: 250px;
+    height: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.product-button{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: green;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;   
+}
+.update-product-container{
+    display: none;
+}
+
+
+/*-------------------------------Modals style end here--------------------------------*/
+@media (max-width: 900px){
+    .nav-items{
+        position: fixed;
+        top: 60px;
+        height: 100%;
+        width: 250px;
+        display: block;
+        text-align: left;
+        transition: all 0.6s ease 0s;
+        background-color: black;
+
+    }
+    #click:not(:checked) ~ .nav-items{
+        left: -100%;
+    }
+    
+     /*#click:checked ~ .nav-items{
+        left: 0%;
+       
+    }  */
+   
+    .nav-items li{
+        display:block;
+        margin-top: 40px;
+    }
+    
+    /* .menu-icon{
+        display:block;
+    } */
+    .menu-icon{
+        color: white;
+        cursor: pointer;
+        padding-left: 10px;
+        margin-right: 30px;
+        
+    }
+    
+
+
+}
+
+/*-----------------------Notification Toaster start here------------------------------*/
+
+.toast{
+    position: fixed;
+    top:0;
+    right: 0;
+    transform: translatey(0%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms, transform 500ms;
+}
+
+.toast.visible{
+    transform: translatey(35%);
+    opacity: 0.9;
+    visibility: visible;
+
+    
+}
+
+.toast-body{
+    margin: 30px;
+    padding: 20px 24px;
+    font-weight: 700;
+    color: darkblue;
+    border-radius: 7px;
+    /*background-color: rgba(30, 128, 0, 0.856);*/
+}
+
+
+

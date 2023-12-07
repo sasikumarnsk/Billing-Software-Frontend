@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="../StyleSheets/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+        <div class="menu-bar">
+            <a>Sk Softwares</a>
+            <input type="checkbox" id="click" onchange="menuBar()">
+            
+            <label for="click" class="menu-icon">
+                <span id="menu-icon-content" class="material-symbols-outlined">
+                    menu
+                    </span>
+            </label>
+            <!-- <button class="menu-icon"><span class="material-symbols-outlined">
+                menu
+                </span></button> -->
+            <ul class="nav-items" id="nav-items-id">
+                <li><a href="#" onclick="menuBar(); viewAllProducts()">View All</a></li>
+                <li><a href="#add-product" onclick="menuBar()">Add Product</a></li>
+                <li><a href="#update-product" onclick="menuBar()">Update</a></li>
+                <li><a href="#delete-product" onclick="menuBar()">Delete</a></li>
+                <li><span id="logout" class="material-symbols-outlined">
+                    logout
+                    </span></li>
+
+            </ul>
+        </div>
+    <div class="table-container">
+        <table id="product-table">
+           
+        </table>
+    <div class="toast" id="toast">
+        <div class="toast-body">
+        </div>
+    </div>
+    </div>
+    <div id="add-product" class="modal">
+        <div class="product-container">
+            <a href="#" class="close"><span class="material-symbols-outlined">
+                close
+                </span></a>
+            <h2>Add Product</h2>
+            <div class="form-container"></div>
+                <form>
+                    <input type="text" id="productName" placeholder="Product Name">
+                    <input type="number" id="productPrice" placeholder="Product Price">
+                    <input type="number" id="productQuantity" placeholder="Product Quantity">
+                </form>
+                <button class="product-button" type="submit" id="add-product-button" onclick="addProduct()">ADD Product</button>
+
+                
+        </div>
+        
+    </div>
+
+    <div id="update-product" class="modal">
+        <div class="product-container">
+            <a href="#" class="close"><span class="material-symbols-outlined">
+                close
+                </span></a>
+            <h2>Update Product</h2>
+            <div class="form-container">
+                <div class="search-product-container" id="search-product-container-id">
+                    <form id="search-product">
+                        <input type="text" id="search-product-id" placeholder="Product ID">
+                    </form>
+                    <button class="product-button" id="product-search-button" onclick="searchProduct()">Search Product</button>
+                </div>
+             <div class="update-product-container" id="update-product-container-id">
+                <form id="update-form">
+                    <input type="text" id="update-productId" placeholder="Product ID">
+                    <input type="text" id="update-productName" placeholder="Product Name">
+                    <input type="number" id="update-productPrice" placeholder="Product Price">
+                    <input type="number" id="update-productQuantity" placeholder="Product Quantity">
+                </form>
+                <button class="product-button" id="product-update-button" onclick="updateProduct()">Update Product</button>
+             </div>   
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-product" class="modal">
+        <div class="product-container">
+            <a href="#" class="close"><span class="material-symbols-outlined">
+                close
+                </span></a>
+            <h2>Delete Product</h2>
+            <div class="delete-product-container">
+                <form>
+                    <input type="text" id="delete-product-id" placeholder="Product ID">
+                </form>
+                <button class="product-button" id="delete-product-button" onclick="deleteProduct()">Delete Product</button>
+            </div>
+        </div>
+    </div>
+    <script src="../Script/index.js"></script>
+</body>
+</html>
