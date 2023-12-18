@@ -60,19 +60,68 @@ a{
     display: none; 
 
 }
+/*---------------------------------Billing style start here----------------------------*/
+.billing{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.185);
+    padding-bottom: 30px;
+    width: 100%;
+    
+}
+#billing-product-name{
+    padding: 5px;
+    width: 250px;
+    margin: 5px;
+    border-radius: 8px;
+}
+#billing-product-quantity{
+    padding: 5px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 8px;
+}
+#billing-product-add-button{
+    padding: 8px;
+    width: 60px;
+    border-radius: 10px;
+    
+}
+#total-amount{
+    padding-top: 20px;
+}
+#finsh-billing-button{
+    width: 100px;
+    background-color: mediumslateblue;
+}
 
+@media (max-width : 430px){
+    #billing-product-add-button{
+        padding: 8px;
+        width: 80px;
+        border-radius: 10px;
+        align-items: center;
+        margin-left: 40%; 
+    }
+    .billing{
+        width: 100%;
+       
+    }
+}
 /*---------------------------------Table style start here-----------------------------*/
 .table-container{
     display: flex;
     flex-direction: column;
-    padding-top: 100px;  
+    padding-top: 30px;  
     align-items: center; 
+    padding-bottom: 20px;
 }
 table{
    border-collapse: collapse;
    align-content: center;
    text-align: center;
-   margin: 20px;
    font-size: 20px;
    font-weight: 520;
 }
@@ -104,8 +153,9 @@ th{
     transition: all 0.4s;
     visibility: hidden;
     opacity: 0;
-    background-color: rgba(2, 1, 1, 0.233);
+    background-color:transparent;
     padding: 20px;
+    height: 100%;
 }
 .modal:target{
     visibility: visible;
@@ -123,7 +173,7 @@ form{
 }
 
 .product-container{
-    background-color: rgba(0, 194, 194, 0.664);
+    background-color: rgba(0, 194, 194, 0.959);
     padding: 30px;
     border-radius: 10px;
     align-items: center;
@@ -145,7 +195,7 @@ input{
 .product-button{
     margin-top: 10px;
     padding: 10px;
-    background-color: green;
+    background-color: rgba(13, 189, 7, 0.842);
     cursor: pointer;
     border-radius: 5px;
     font-weight: 700;   
